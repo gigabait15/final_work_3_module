@@ -11,8 +11,8 @@ def open_json(value):
         return operations
 
 
-def state_executed():
-    operations = open_json(filepath)
+def state_executed(value):
+    operations = open_json(value)
     sorted_operations = sorted(operations, key=lambda op: op.get('date', ''), reverse=True)
     result = []
     count = 0
